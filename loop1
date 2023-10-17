@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 4</title>
+</head>
+<body>
+    <h1>Adivinhe o numero</h1>
+    <span id="bagulho"></span>
+    <script>
+        let n1 = prompt("Escolha o numero de 1 a 10 que o segundo jogador vai adivinhar")
+        let n2 = prompt("Adivinhe o numero de 1 a 10 que o primeiro jogador escolheu")
+        let Ntentativas = 0
+
+        while (n2 != n1) {
+            n2 = prompt("Errou, tente novamente e escolha um numero de 1 a 10")
+            Ntentativas = Ntentativas + 1
+        }
+        if (n2 = n1) {
+            document.getElementById("bagulho").innerHTML = "Parabens, o numero era " + n1 + " você acertou em " + Ntentativas + " tentativas."
+        }
+    </script>
+</body>
+</html>

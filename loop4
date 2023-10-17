@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 3</title>
+</head>
+<body>
+    <h1> Tabuada do numero selecionado: </h1>
+    <span id="tabuada"></span>
+    <script>
+        let n1 = Number(prompt("Digite o numero que deseja saber a tabuada"));
+        let resultado = 0;
+        for (let n2 = 1; n2 < 11; n2++) {
+            resultado = n2*n1;
+            document.getElementById("tabuada").innerHTML += n2 + " x " + n1 + " = " + resultado + "." + "<br>";
+            }
+    </script>
+</body>
+</html>

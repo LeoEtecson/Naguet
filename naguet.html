@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pedido de Lanches</title>
+</head>
+<body>
+  <h1>Escolha o seu pedido</h1>
+
+  <script>
+    const hamburgueres = {
+      X1: 1.36,
+      X2: 2.31,
+      X3: 2.81,
+      X4: 3.21
+    };
+
+    const acompanhamentos = {
+      Nuggets: 3.69,
+      Fritas: 1.58
+    };
+
+    const bebidas = {
+      "Coca-cola": 1.48,
+      Fanta: 2.58,
+      Água: 0.98
+    };
+
+    const itensEscolhidos = [];
+
+    const escolhaHamburguer = prompt("Escolha o seu hamburguer (X1, X2, X3, X4): ");
+    itensEscolhidos.push(escolhaHamburguer);
+
+    const escolhaAcompanhamento = prompt("Escolha o seu acompanhamento (Nuggets, Fritas): ");
+    itensEscolhidos.push(escolhaAcompanhamento);
+
+    const escolhaBebida = prompt("Escolha a sua bebida (Coca-cola, Fanta, Água): ");
+    itensEscolhidos.push(escolhaBebida);
+
+    let totalPedido = 0;
+    totalPedido += hamburgueres[escolhaHamburguer] || 0;
+    totalPedido += acompanhamentos[escolhaAcompanhamento] || 0;
+    totalPedido += bebidas[escolhaBebida] || 0;
+
+    const resultado = "Itens escolhidos: " + "<br>Total do pedido: R$" + totalPedido.toFixed(2);
+    document.body.innerHTML += "<p>" + resultado + "</p>";
+  </script>
+</body>
+</html>
